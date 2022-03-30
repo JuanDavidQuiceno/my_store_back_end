@@ -20,3 +20,27 @@ npm docs joi
 
 //cors
 npm i cors
+
+//Docker
+docker-compose up -d {nombre del services:} // ejecuta docker
+docket-compose ps //lista contenedores que esta en ejecucion
+docker ps //mas detallado
+docker stop {id_contenedor} //para detener un contenedor contenedor
+docker-compose run mysql bash //conecta a el contendor por medio de una consola
+pqsl -h localhost -d my_store -U root //conectar a la db desde el bash
+
+docker-compose up -d postgres // crea la imagen servicio
+docker-compose run postgres //levanta el servicio
+
+docker-compose up -d pgadmin // levanta servicio
+docker-compose run pgadmin
+
+docker inspect {id contenedor}
+
+
+CREATE TABLE tasks(
+	id serial PRIMARY KEY,
+	title VARCHAR (255) NOT NULL,
+	completed boolean DEFAULT false
+)
+
