@@ -1,0 +1,22 @@
+npm init -y
+
+npm i nodemon eslint eslint-config-prettier eslint-plugin-prettier prettier -D
+
+
+//generador de datos de pruebas y formato para instalar una version especifica
+npm i faker@5.5.3 -S
+
+//desistalar un paquete
+npm uninstall faker
+
+// manejo de errores
+npm i @hapi/boom
+
+//validacion de datos
+npm i joi
+
+//ver documentacion
+npm docs joi
+
+//cors
+npm i cors
