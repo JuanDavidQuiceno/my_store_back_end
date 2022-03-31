@@ -10,19 +10,19 @@ const ip = '192.168.101.5';
 
 app.use(express.json());//aceptar data en el cuenpo
 
-const whiteList = ['http:localhost:8080', 'http://myapp.co'];
-const options = {
-  origin: (origin, callback) => {
-    if (whiteList.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('no permitido'));
-    }
-  }
+// const whiteList = ['http:localhost:8080', 'http://myapp.co', 'http:localhost:5432', 'http://192.168.101.5:3000'];
+// const options = {
+//   origin: (origin, callback) => {
+//     if (whiteList.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('no permitido'));
+//     }
+//   }
 
-}
-// app.use(cors);//acepta cualquier origen
-app.use(cors(options));//acepta cualquier origen
+// }
+app.use(cors());//acepta cualquier origen
+// app.use(cors(options));//acepta cualquier origen
 
 app.get('/', (req, res) => {
   res.send('hola mi server en express');
